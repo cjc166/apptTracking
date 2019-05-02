@@ -15,6 +15,7 @@
 		75D9C6D0227B5723000ECE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9C6CE227B5723000ECE8A /* LaunchScreen.storyboard */; };
 		75D9C6DB227B5723000ECE8A /* apptTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6DA227B5723000ECE8A /* apptTrackingTests.swift */; };
 		75D9C6E6227B5723000ECE8A /* apptTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6E5227B5723000ECE8A /* apptTrackingUITests.swift */; };
+		75D9C6F4227B5D40000ECE8A /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		75D9C6E1227B5723000ECE8A /* apptTrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apptTrackingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D9C6E5227B5723000ECE8A /* apptTrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apptTrackingUITests.swift; sourceTree = "<group>"; };
 		75D9C6E7227B5723000ECE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
 				75D9C6C4227B5720000ECE8A /* ViewController.swift */,
+				75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */,
 				75D9C6C6227B5720000ECE8A /* Main.storyboard */,
 				75D9C6CC227B5723000ECE8A /* Assets.xcassets */,
 				75D9C6CE227B5723000ECE8A /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				75D9C6C5227B5720000ECE8A /* ViewController.swift in Sources */,
 				75D9C6C3227B5720000ECE8A /* AppDelegate.swift in Sources */,
 				75D9C6CB227B5720000ECE8A /* apptTracking.xcdatamodeld in Sources */,
+				75D9C6F4227B5D40000ECE8A /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
