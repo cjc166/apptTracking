@@ -23,17 +23,21 @@ class API {
     static func loginAttempt(username: String, password: String, completionHandler: @escaping (Bool, Any?, Error?) -> Void) {
         DispatchQueue.main.async {
             let parameters: [String: String] = ["username": username, "password": password]
-            Alamofire.request(/*login URL*/"", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            Alamofire.request("https://glacial-gorge-86115.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
                 switch response.result {
                 case .success:
                     print("Validation Successful")
                     if let result = response.result.value {
+                        print(result)
+                        print(response.data)
                         let JSON = result as! NSDictionary
                         setUserId(userId: JSON["userid"]! as! String)
                         print(getUserId())
                     }
                     completionHandler(true, response, nil)
                 case .failure(let error):
+                    print (response)
+                    print("FAILED TO LOGIN")
                     print(error)
                     completionHandler(false, response, nil)
                 }
@@ -46,7 +50,7 @@ class API {
         SUCCESS_CODE = 200
         DispatchQueue.main.async {
             let parameters: [String: String] = ["username": username, "password": password]
-            Alamofire.request(/*registration URL*/"", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
+            Alamofire.request("https://glacial-gorge-86115.herokuapp.com/register", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
                 var statusCode: Int
                 statusCode = response.response!.statusCode
                 if (statusCode == SUCCESS_CODE) {

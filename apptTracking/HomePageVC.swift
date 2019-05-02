@@ -12,9 +12,17 @@ import UIKit
 class HomePageVC: UIViewController {
     
     @IBOutlet weak var logoutButton: UIBarButtonItem!
+    @IBOutlet weak var createNewAppointmentButton: UIButton!
+    @IBOutlet weak var viewAppointmentsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func viewAppointmentsButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func createNewAppointmentButtonPressed(_ sender: Any) {
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
@@ -41,13 +49,6 @@ class HomePageVC: UIViewController {
     
     func logout() {
         performSegue(withIdentifier: "logoutSegue", sender: self)
-        //self.navigationcontroller?.popviewcontroller(animation: true)
-        /*
-        let vc: LoginPageVC  = self.storyboard?.instantiateViewController(withIdentifier: "LoginPage") as! LoginPageVC
-        self.present(vc, animated: true, completion: {
-            print("logout confirmed")
-        })
-        */
     }
     
 }

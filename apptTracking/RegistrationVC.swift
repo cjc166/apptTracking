@@ -26,11 +26,13 @@ class RegistrationVC: UIViewController {
         
         var registered: Bool = Bool()
         
+        let pw = API.passwordHash(username: user, password: password)
+        
         if (password != confirmPassword) {
             mismatchPasswords()
         } else {
             
-            API.registrationAttempt(username: user, password: password, completionHandler: { (success, content, error) in
+            API.registrationAttempt(username: user, password: pw, completionHandler: { (success, content, error) in
                 registered = success
                 print(registered)
                 if (registered) {

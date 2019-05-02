@@ -29,7 +29,7 @@ class LoginPageVC: UIViewController {
             pw = API.passwordHash(username: user, password: pw)
             
             var loggedIn: Bool = Bool()
-            
+
             API.loginAttempt(username: user, password: pw, completionHandler: { (success, content, error) in
                 loggedIn = success
                 print(loggedIn)
