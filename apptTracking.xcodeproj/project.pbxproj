@@ -20,6 +20,10 @@
 		75D9C6F6227B620C000ECE8A /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F5227B620C000ECE8A /* HomePageVC.swift */; };
 		75D9C6F8227B754F000ECE8A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F7227B754F000ECE8A /* API.swift */; };
 		75D9C6FA227B759C000ECE8A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F9227B759C000ECE8A /* Defaults.swift */; };
+		75D9C6FC227B94BE000ECE8A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6FB227B94BE000ECE8A /* Appointment.swift */; };
+		75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */; };
+		75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */; };
+		75D9C706227BB0C5000ECE8A /* CreateAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		75D9C6F5227B620C000ECE8A /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		75D9C6F7227B754F000ECE8A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		75D9C6F9227B759C000ECE8A /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		75D9C6FB227B94BE000ECE8A /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListVC.swift; sourceTree = "<group>"; };
+		75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentVC.swift; sourceTree = "<group>"; };
 		A3B6B7317EC224B34964E5C0 /* Pods-apptTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,12 +130,9 @@
 		75D9C6C1227B5720000ECE8A /* apptTracking */ = {
 			isa = PBXGroup;
 			children = (
-				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
-				75D9C6C4227B5720000ECE8A /* ViewController.swift */,
-				75D9C6F7227B754F000ECE8A /* API.swift */,
-				75D9C6F9227B759C000ECE8A /* Defaults.swift */,
-				75D9C6F5227B620C000ECE8A /* HomePageVC.swift */,
-				75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */,
+				75D9C700227BA7FD000ECE8A /* Supporting */,
+				75D9C6FF227BA7D3000ECE8A /* VCs */,
+				75D9C6FE227BA7C8000ECE8A /* Models */,
 				75D9C6C6227B5720000ECE8A /* Main.storyboard */,
 				75D9C6CC227B5723000ECE8A /* Assets.xcassets */,
 				75D9C6CE227B5723000ECE8A /* LaunchScreen.storyboard */,
@@ -153,6 +158,37 @@
 				75D9C6E7227B5723000ECE8A /* Info.plist */,
 			);
 			path = apptTrackingUITests;
+			sourceTree = "<group>";
+		};
+		75D9C6FE227BA7C8000ECE8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6FB227B94BE000ECE8A /* Appointment.swift */,
+				75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75D9C6FF227BA7D3000ECE8A /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6C4227B5720000ECE8A /* ViewController.swift */,
+				75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */,
+				75D9C6F5227B620C000ECE8A /* HomePageVC.swift */,
+				75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */,
+				75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		75D9C700227BA7FD000ECE8A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
+				75D9C6F7227B754F000ECE8A /* API.swift */,
+				75D9C6F9227B759C000ECE8A /* Defaults.swift */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		93D37E2E8CBC68C0AA24D016 /* Pods */ = {
@@ -348,10 +384,14 @@
 			files = (
 				75D9C6F6227B620C000ECE8A /* HomePageVC.swift in Sources */,
 				75D9C6FA227B759C000ECE8A /* Defaults.swift in Sources */,
+				75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */,
 				75D9C6C5227B5720000ECE8A /* ViewController.swift in Sources */,
+				75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */,
+				75D9C6FC227B94BE000ECE8A /* Appointment.swift in Sources */,
 				75D9C6C3227B5720000ECE8A /* AppDelegate.swift in Sources */,
 				75D9C6CB227B5720000ECE8A /* apptTracking.xcdatamodeld in Sources */,
 				75D9C6F8227B754F000ECE8A /* API.swift in Sources */,
+				75D9C706227BB0C5000ECE8A /* CreateAppointmentVC.swift in Sources */,
 				75D9C6F4227B5D40000ECE8A /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

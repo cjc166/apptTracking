@@ -37,7 +37,7 @@ class RegistrationVC: UIViewController {
                 print(registered)
                 if (registered) {
                     self.registrationSuccessful()
-                    self.performSegue(withIdentifier: "registerSuccessfulSegue", sender: self.registerButton)
+                    self.performSegue(withIdentifier: "registerSuccessfulSegue", sender: self)
                 } else {
                     self.usernameTaken()
                 }

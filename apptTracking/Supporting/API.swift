@@ -29,7 +29,6 @@ class API {
                     print("Validation Successful")
                     if let result = response.result.value {
                         print(result)
-                        print(response.data)
                         let JSON = result as! NSDictionary
                         setUserId(userId: JSON["userid"]! as! String)
                         print(getUserId())
