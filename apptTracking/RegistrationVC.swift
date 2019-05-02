@@ -20,5 +20,69 @@ class RegistrationVC: UIViewController {
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
+        let user = usernameTextField.text!
+        let password = passwordTextField.text!
+        let confirmPassword = confirmPasswordTextField.text!
+        
+        var registered: Bool = Bool()
+        
+        if (password != confirmPassword) {
+            mismatchPasswords()
+        } else {
+            
+            API.registrationAttempt(username: user, password: password, completionHandler: { (success, content, error) in
+                registered = success
+                print(registered)
+                if (registered) {
+                    self.registrationSuccessful()
+                    self.performSegue(withIdentifier: "registerSuccessfulSegue", sender: self.registerButton)
+                } else {
+                    self.usernameTaken()
+                }
+            })
+        }
+    }
+    
+    func registrationSuccessful() {
+        
+        let dialogMessage = UIAlertController(title: "Success", message: "Registered!", preferredStyle: .alert)
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func usernameTaken() {
+        let dialogMessage = UIAlertController(title: "Error", message: "Username Taken", preferredStyle: .alert)
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func mismatchPasswords() {
+        let dialogMessage = UIAlertController(title: "Error", message: "Passwords don't match", preferredStyle: .alert)
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
     }
 }

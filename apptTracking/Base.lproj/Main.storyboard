@@ -206,9 +206,11 @@
                         <outlet property="passwordTextField" destination="7HA-oB-wzg" id="MXv-UZ-k26"/>
                         <outlet property="registerButton" destination="ezk-Zx-x32" id="nYa-9u-8kf"/>
                         <outlet property="usernameTextField" destination="KEx-s4-VAz" id="AVf-14-ao2"/>
+                        <segue destination="G74-cS-paP" kind="unwind" identifier="registerSuccessfulSegue" unwindAction="logoutSegueWithSegue:" id="MZK-9r-ZgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHl-Ph-pbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="G74-cS-paP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1955" y="138"/>
         </scene>
