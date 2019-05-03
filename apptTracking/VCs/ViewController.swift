@@ -21,23 +21,30 @@ class LoginPageVC: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        if (/* login condition */ usernameTextField.text! == "abc") {
-            performSegue(withIdentifier: "loginSegue", sender: self)
-        } else {
-            loginError()
-        }
-       /* let vc: HomePageVC = self.storyboard?.instantiateViewController(withIdentifier: "HomePage") as! HomePageVC
-        self.present(vc, animated: true, completion: {
-            print("login successful")
-        }) */
-    }
-    
-    @IBAction func registerButtonPressed(_ sender: Any) {
         
+        DispatchQueue.main.async {
+            let user = self.usernameTextField.text!
+            var pw = self.passwordTextField.text!
+            
+            pw = API.passwordHash(username: user, password: pw)
+            
+            var loggedIn: Bool = Bool()
+
+            API.loginAttempt(username: user, password: pw, completionHandler: { (success, content, error) in
+                loggedIn = success
+                print(loggedIn)
+                
+                if (loggedIn) {
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                } else {
+                    self.loginError()
+                }
+            })
+        }
     }
     
     func loginError() {
-        let dialogMessage = UIAlertController(title: "Confirm", message: "Invalid Credentials", preferredStyle: .alert)
+        let dialogMessage = UIAlertController(title: "Error", message: "Invalid Credentials", preferredStyle: .alert)
         
         // Create Cancel button with action handlder
         let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
@@ -50,8 +57,10 @@ class LoginPageVC: UIViewController {
         self.present(dialogMessage, animated: true, completion: nil)
     }
     
+    @IBAction func registerButtonPressed(_ sender: Any) {
+    }
+    
     @IBAction func logoutSegue(segue:UIStoryboardSegue) {
-        
     }
     
 }

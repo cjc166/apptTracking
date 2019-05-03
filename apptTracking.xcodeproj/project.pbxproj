@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E65F8F3B6B38FF7369355AF /* Pods_apptTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4876E55C31018DFCB1CB5 /* Pods_apptTracking.framework */; };
 		75D9C6C3227B5720000ECE8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6C2227B5720000ECE8A /* AppDelegate.swift */; };
 		75D9C6C5227B5720000ECE8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6C4227B5720000ECE8A /* ViewController.swift */; };
 		75D9C6C8227B5720000ECE8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9C6C6227B5720000ECE8A /* Main.storyboard */; };
@@ -17,6 +18,12 @@
 		75D9C6E6227B5723000ECE8A /* apptTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6E5227B5723000ECE8A /* apptTrackingUITests.swift */; };
 		75D9C6F4227B5D40000ECE8A /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */; };
 		75D9C6F6227B620C000ECE8A /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F5227B620C000ECE8A /* HomePageVC.swift */; };
+		75D9C6F8227B754F000ECE8A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F7227B754F000ECE8A /* API.swift */; };
+		75D9C6FA227B759C000ECE8A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6F9227B759C000ECE8A /* Defaults.swift */; };
+		75D9C6FC227B94BE000ECE8A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C6FB227B94BE000ECE8A /* Appointment.swift */; };
+		75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */; };
+		75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */; };
+		75D9C706227BB0C5000ECE8A /* CreateAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3208FFEF59F8419D1E11E3 /* Pods-apptTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking.release.xcconfig"; sourceTree = "<group>"; };
+		25F4876E55C31018DFCB1CB5 /* Pods_apptTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apptTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D9C6BF227B5720000ECE8A /* apptTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D9C6C2227B5720000ECE8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D9C6C4227B5720000ECE8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +62,13 @@
 		75D9C6E7227B5723000ECE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		75D9C6F5227B620C000ECE8A /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		75D9C6F7227B754F000ECE8A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		75D9C6F9227B759C000ECE8A /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		75D9C6FB227B94BE000ECE8A /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListVC.swift; sourceTree = "<group>"; };
+		75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentVC.swift; sourceTree = "<group>"; };
+		A3B6B7317EC224B34964E5C0 /* Pods-apptTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E65F8F3B6B38FF7369355AF /* Pods_apptTracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13CFA41DC64DE73F78E0BA3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25F4876E55C31018DFCB1CB5 /* Pods_apptTracking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75D9C6B6227B5720000ECE8A = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +112,8 @@
 				75D9C6D9227B5723000ECE8A /* apptTrackingTests */,
 				75D9C6E4227B5723000ECE8A /* apptTrackingUITests */,
 				75D9C6C0227B5720000ECE8A /* Products */,
+				93D37E2E8CBC68C0AA24D016 /* Pods */,
+				13CFA41DC64DE73F78E0BA3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +130,9 @@
 		75D9C6C1227B5720000ECE8A /* apptTracking */ = {
 			isa = PBXGroup;
 			children = (
-				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
-				75D9C6C4227B5720000ECE8A /* ViewController.swift */,
-				75D9C6F5227B620C000ECE8A /* HomePageVC.swift */,
-				75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */,
+				75D9C700227BA7FD000ECE8A /* Supporting */,
+				75D9C6FF227BA7D3000ECE8A /* VCs */,
+				75D9C6FE227BA7C8000ECE8A /* Models */,
 				75D9C6C6227B5720000ECE8A /* Main.storyboard */,
 				75D9C6CC227B5723000ECE8A /* Assets.xcassets */,
 				75D9C6CE227B5723000ECE8A /* LaunchScreen.storyboard */,
@@ -134,6 +160,46 @@
 			path = apptTrackingUITests;
 			sourceTree = "<group>";
 		};
+		75D9C6FE227BA7C8000ECE8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6FB227B94BE000ECE8A /* Appointment.swift */,
+				75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75D9C6FF227BA7D3000ECE8A /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6C4227B5720000ECE8A /* ViewController.swift */,
+				75D9C6F3227B5D40000ECE8A /* RegistrationVC.swift */,
+				75D9C6F5227B620C000ECE8A /* HomePageVC.swift */,
+				75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */,
+				75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		75D9C700227BA7FD000ECE8A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
+				75D9C6F7227B754F000ECE8A /* API.swift */,
+				75D9C6F9227B759C000ECE8A /* Defaults.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		93D37E2E8CBC68C0AA24D016 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3B6B7317EC224B34964E5C0 /* Pods-apptTracking.debug.xcconfig */,
+				0C3208FFEF59F8419D1E11E3 /* Pods-apptTracking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D9C6EA227B5723000ECE8A /* Build configuration list for PBXNativeTarget "apptTracking" */;
 			buildPhases = (
+				7EDCD75355ADB7E96096A04E /* [CP] Check Pods Manifest.lock */,
 				75D9C6BB227B5720000ECE8A /* Sources */,
 				75D9C6BC227B5720000ECE8A /* Frameworks */,
 				75D9C6BD227B5720000ECE8A /* Resources */,
+				BE4FAE3875C8D65B37127EDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,15 +328,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EDCD75355ADB7E96096A04E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apptTracking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE4FAE3875C8D65B37127EDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75D9C6BB227B5720000ECE8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				75D9C6F6227B620C000ECE8A /* HomePageVC.swift in Sources */,
+				75D9C6FA227B759C000ECE8A /* Defaults.swift in Sources */,
+				75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */,
 				75D9C6C5227B5720000ECE8A /* ViewController.swift in Sources */,
+				75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */,
+				75D9C6FC227B94BE000ECE8A /* Appointment.swift in Sources */,
 				75D9C6C3227B5720000ECE8A /* AppDelegate.swift in Sources */,
 				75D9C6CB227B5720000ECE8A /* apptTracking.xcdatamodeld in Sources */,
+				75D9C6F8227B754F000ECE8A /* API.swift in Sources */,
+				75D9C706227BB0C5000ECE8A /* CreateAppointmentVC.swift in Sources */,
 				75D9C6F4227B5D40000ECE8A /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +565,7 @@
 		};
 		75D9C6EB227B5723000ECE8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B6B7317EC224B34964E5C0 /* Pods-apptTracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +584,7 @@
 		};
 		75D9C6EC227B5723000ECE8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C3208FFEF59F8419D1E11E3 /* Pods-apptTracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
