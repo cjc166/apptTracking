@@ -23,9 +23,10 @@ class Reminders{
                 reminder.title=title
                 reminder.startDateComponents = Reminders.dateComponentFromNSDate(date: date) as DateComponents
                 reminder.dueDateComponents = Reminders.dateComponentFromNSDate(date: date) as DateComponents
-               
                 
                 reminder.calendar = eventStore.defaultCalendarForNewReminders()
+                let alarm = EKAlarm()
+                reminder.addAlarm(alarm)
                 do {
                     try eventStore.save(reminder, commit: true)
                 }catch{
