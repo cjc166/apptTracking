@@ -11,9 +11,15 @@ import UIKit
 
 class CreateAppointmentVC: UIViewController {
     
+    @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var officeTextField: UITextField!
+    @IBOutlet weak var streetAddressTextField: UITextField!
+    @IBOutlet weak var cityAddressTextField: UITextField!
     @IBOutlet weak var datePickerTextField: UITextField!
-    @IBOutlet weak var createAppointmentButton: UIButton!
     @IBOutlet weak var timePickerTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    @IBOutlet weak var createAppointmentButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +28,49 @@ class CreateAppointmentVC: UIViewController {
     }
     
     @IBAction func createAppointmentButtonPressed(_ sender: Any) {
-        print(datePickerTextField.text!)
+        
+        let type: String = typeTextField.text!
+        let office: String = officeTextField.text!
+        let address: String = streetAddressTextField.text! + " " + cityAddressTextField.text!
+        let date = datePickerTextField.text!
+        let time = timePickerTextField.text!
+        let phoneNumber = phoneNumberTextField.text!
+        
+        API.createAppointment(type: type, office: office, address: address, phoneNumber: phoneNumber, date: date, time: time) { (success) in
+            if (success) {
+                self.creationSuccessful()
+            } else {
+                self.failedCreation()
+            }
+        }
+    }
+    
+    func creationSuccessful() {
+        let dialogMessage = UIAlertController(title: "Success", message: "Creation succesful!", preferredStyle: .alert)
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
+            print("creation successful")
+        }
+        
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func failedCreation() {
+        let dialogMessage = UIAlertController(title: "Error", message: "Error in creation", preferredStyle: .alert)
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Okay", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
     }
     
     let datePicker = UIDatePicker()
@@ -47,7 +95,7 @@ class CreateAppointmentVC: UIViewController {
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
+        formatter.dateFormat = "yyyy/MM/dd"
         datePickerTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
@@ -79,7 +127,6 @@ class CreateAppointmentVC: UIViewController {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
-        //formatter.timeZone = TimeZone(secondsFromGMT: 0)
         timePickerTextField.text = formatter.string(from: timePicker.date)
         self.view.endEditing(true)
     }

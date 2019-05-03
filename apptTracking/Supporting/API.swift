@@ -63,6 +63,25 @@ class API {
         }
     }
     
+    static func createAppointment(type: String, office: String, address: String, phoneNumber: String, date: String, time: String, completionHandler: @escaping (Bool) -> Void) {
+        DispatchQueue.main.async {
+            let parameters: [String: String] = ["type": type, "office": office, "address": address, "phoneNumber": phoneNumber, "date": date, "time": time]
+            Alamofire.request("https://glacial-gorge-86115.herokuapp.com/addAppointment/" + getUserId() , method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
+                var statusCode: Int
+                let SUCCESS_CODE = 200
+                statusCode = response.response!.statusCode
+                if (statusCode == SUCCESS_CODE) {
+                    print("Validation Successful")
+                    completionHandler(true)
+                } else {
+                    print("Error")
+                    completionHandler(false)
+                }
+            }
+
+        }
+    }
+    
     static func passwordHash(username: String, password: String) -> String {
         let salt = "x4vV8bGgqqmQwgCoyXFQj+(o.nUNQhVP7ND"
         return "\(password).\(username).\(salt)".sha256()
