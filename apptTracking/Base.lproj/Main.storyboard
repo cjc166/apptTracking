@@ -219,7 +219,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fK-uo-Qdj">
-                                <rect key="frame" x="53" y="703" width="309" height="85"/>
+                                <rect key="frame" x="53" y="741" width="309" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -272,6 +272,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind me if I haven't been in            months" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-40-hez">
+                                <rect key="frame" x="35" y="696" width="339" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-xe-pvL">
+                                <rect key="frame" x="270" y="691" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IG0-Qr-5qy"/>
@@ -280,6 +294,7 @@
                         <outlet property="cityAddressTextField" destination="bcP-lt-f9z" id="vFR-8Y-fSG"/>
                         <outlet property="createAppointmentButton" destination="2fK-uo-Qdj" id="vEZ-bT-3vJ"/>
                         <outlet property="datePickerTextField" destination="6wb-Yz-YHe" id="Fkf-om-m70"/>
+                        <outlet property="numMonthsReminderTextField" destination="mfX-xe-pvL" id="gOB-nW-CeX"/>
                         <outlet property="officeTextField" destination="gcF-2M-pws" id="Yh5-am-Fvi"/>
                         <outlet property="phoneNumberTextField" destination="wjU-8f-yCx" id="Bxj-ah-3A4"/>
                         <outlet property="streetAddressTextField" destination="oFU-R6-5KI" id="1oZ-g3-HYu"/>

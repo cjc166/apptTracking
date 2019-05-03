@@ -18,6 +18,7 @@ class CreateAppointmentVC: UIViewController {
     @IBOutlet weak var datePickerTextField: UITextField!
     @IBOutlet weak var timePickerTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var numMonthsReminderTextField: UITextField!
     
     @IBOutlet weak var createAppointmentButton: UIButton!
     
@@ -35,8 +36,9 @@ class CreateAppointmentVC: UIViewController {
         let date = datePickerTextField.text!
         let time = timePickerTextField.text!
         let phoneNumber = phoneNumberTextField.text!
+        let numMonths = numMonthsReminderTextField.text!
         
-        API.createAppointment(type: type, office: office, address: address, phoneNumber: phoneNumber, date: date, time: time) { (success) in
+        API.createAppointment(type: type, office: office, address: address, phoneNumber: phoneNumber, date: date, time: time, numMonths: numMonths) { (success) in
             if (success) {
                 self.creationSuccessful()
             } else {
