@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,7 @@
 		75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C701227BA8A8000ECE8A /* AppointmentTableViewCell.swift */; };
 		75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C703227BAB4A000ECE8A /* AppointmentListVC.swift */; };
 		75D9C706227BB0C5000ECE8A /* CreateAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C705227BB0C5000ECE8A /* CreateAppointmentVC.swift */; };
+		C1F74216227BD04D0058FFA4 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F74215227BD04D0058FFA4 /* Reminders.swift */; };
 		E6F6AF159C34BF7879A73063 /* Pods_apptTrackingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468E71EDF4666E1CE7713790 /* Pods_apptTrackingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		A029E8F6271E22E73F7ECEC0 /* Pods-apptTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTrackingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apptTrackingTests/Pods-apptTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B6B7317EC224B34964E5C0 /* Pods-apptTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apptTracking/Pods-apptTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7F59C8664B78590D1AB15A /* Pods-apptTrackingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTrackingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apptTrackingUITests/Pods-apptTrackingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C1F74215227BD04D0058FFA4 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		DF60E125CF8C6EC254B76BA1 /* Pods-apptTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apptTrackingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apptTrackingTests/Pods-apptTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			children = (
 				75D9C6C2227B5720000ECE8A /* AppDelegate.swift */,
 				75D9C6F7227B754F000ECE8A /* API.swift */,
+				C1F74215227BD04D0058FFA4 /* Reminders.swift */,
 				75D9C6F9227B759C000ECE8A /* Defaults.swift */,
 			);
 			path = Supporting;
@@ -440,6 +443,7 @@
 				75D9C6F6227B620C000ECE8A /* HomePageVC.swift in Sources */,
 				75D9C6FA227B759C000ECE8A /* Defaults.swift in Sources */,
 				75D9C702227BA8A8000ECE8A /* AppointmentTableViewCell.swift in Sources */,
+				C1F74216227BD04D0058FFA4 /* Reminders.swift in Sources */,
 				75D9C6C5227B5720000ECE8A /* ViewController.swift in Sources */,
 				75D9C704227BAB4A000ECE8A /* AppointmentListVC.swift in Sources */,
 				75D9C6FC227B94BE000ECE8A /* Appointment.swift in Sources */,
@@ -624,13 +628,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 947K376JHL;
+				DEVELOPMENT_TEAM = G6W3GC2Z7P;
 				INFOPLIST_FILE = apptTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.caleb.apptTracking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.savitamedlang.apptTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -643,13 +647,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 947K376JHL;
+				DEVELOPMENT_TEAM = G6W3GC2Z7P;
 				INFOPLIST_FILE = apptTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.caleb.apptTracking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.savitamedlang.apptTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

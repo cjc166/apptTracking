@@ -41,6 +41,8 @@ class CreateAppointmentVC: UIViewController {
         API.createAppointment(type: type, office: office, address: address, phoneNumber: phoneNumber, date: date, time: time, numMonths: numMonths) { (success) in
             if (success) {
                 self.creationSuccessful()
+                Reminders.createReminder(title: "Call" + phoneNumber + " to schedule a " + type, date: self.stringToDate(date: date) as NSDate)
+                print(date)
             } else {
                 self.failedCreation()
             }
@@ -135,6 +137,17 @@ class CreateAppointmentVC: UIViewController {
     
     @objc func canceltimePicker(){
         self.view.endEditing(true)
+    }
+    
+    func stringToDate(date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/mm/dd" //Your date format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
+        //according to date format your date string
+        guard let date = dateFormatter.date(from: date) else {
+            fatalError()
+        }
+        return date
     }
     
 }
