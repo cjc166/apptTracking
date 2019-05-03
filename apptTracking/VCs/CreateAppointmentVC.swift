@@ -26,6 +26,12 @@ class CreateAppointmentVC: UIViewController {
         super.viewDidLoad()
         showDatePicker()
         showTimePicker()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.removeKeyboard(_:)))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func removeKeyboard(_ sender: UITapGestureRecognizer){
+        view.endEditing(true)
     }
     
     @IBAction func createAppointmentButtonPressed(_ sender: Any) {
@@ -41,7 +47,8 @@ class CreateAppointmentVC: UIViewController {
         API.createAppointment(type: type, office: office, address: address, phoneNumber: phoneNumber, date: date, time: time, numMonths: numMonths) { (success) in
             if (success) {
                 self.creationSuccessful()
-                Reminders.createReminder(title: "Call" + phoneNumber + " to schedule a " + type, date: self.stringToDate(date: date) as NSDate)
+                let reminderDate = self.addXMonths(date: date, numMonths: numMonths)
+                Reminders.createReminder(title: "Call " + phoneNumber + " to schedule a " + type, date: self.stringToDate(date: reminderDate) as NSDate)
                 print(date)
             } else {
                 self.failedCreation()
@@ -140,14 +147,43 @@ class CreateAppointmentVC: UIViewController {
     }
     
     func stringToDate(date: String) -> Date {
+        print("String " + date)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/mm/dd" //Your date format
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
-        //according to date format your date string
-        guard let date = dateFormatter.date(from: date) else {
-            fatalError()
-        }
-        return date
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let newDate = dateFormatter.date(from: date)
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy/mm/dd" //Your date format
+//        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
+//        //according to date format your date string
+//        guard let date = dateFormatter.date(from: date) else {
+//            fatalError()
+//        }
+        print("Date")
+        print(newDate!)
+        return newDate!
     }
     
+    func addXMonths(date: String, numMonths: String) -> String {
+        //   2019/12/30
+        
+//        print(date)
+//        print(numMonths)
+        let arr = date.components(separatedBy: "/")
+        var year=Int(arr[0])
+        var month = Int(arr[1])
+        var day=Int(arr[2])
+        
+        month = month! + Int(numMonths)!
+        if (month! > 12){
+            month = month!%12
+            year=year!+1
+        }
+        if (day! > 28){
+            day = 28
+        }
+        
+        return String(year!) + "/" + String(month!) + "/" + String(day!)
+        
+
+    }
 }

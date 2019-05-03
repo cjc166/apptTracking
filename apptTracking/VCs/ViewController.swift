@@ -17,8 +17,15 @@ class LoginPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.removeKeyboard(_:)))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
+    
+    @objc func removeKeyboard(_ sender: UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         

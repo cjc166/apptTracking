@@ -13,6 +13,7 @@ import EventKit
 class Reminders{
     
     static func createReminder(title: String, date: NSDate){
+        
         let eventStore = EKEventStore()
         eventStore.requestAccess(to: .reminder, completion: {
             (accessGranted: Bool, error: Error?) in
@@ -21,6 +22,8 @@ class Reminders{
                 let reminder: EKReminder! = EKReminder(eventStore: eventStore)
                 reminder.title=title
                 reminder.startDateComponents = Reminders.dateComponentFromNSDate(date: date) as DateComponents
+                reminder.dueDateComponents = Reminders.dateComponentFromNSDate(date: date) as DateComponents
+               
                 
                 reminder.calendar = eventStore.defaultCalendarForNewReminders()
                 do {
@@ -32,11 +35,11 @@ class Reminders{
                 print("No access")
             }
         })
-//        eventStore.index(ofAccessibilityElement: EKEntityMaskReminder)
-//        var isAccessToEventStoreGranted: Bool = false
     }
     
     static func dateComponentFromNSDate(date: NSDate)-> NSDateComponents{
+        print(date)
+        
         let calendar = Calendar.current
         let dateComponents = calendar.dateComponents(
             [.calendar, .timeZone,
@@ -46,6 +49,8 @@ class Reminders{
              .weekday, .weekdayOrdinal,
              .weekOfMonth, .weekOfYear, .yearForWeekOfYear],
             from: date as Date)
+        
+        print(dateComponents)
         return dateComponents as NSDateComponents
         
     }
